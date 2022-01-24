@@ -938,7 +938,7 @@ img {
 }
 
 
-.footer__copy{
+.footer__copyright{
     font-size: var(--smaller-font-size);
     text-align: center;
     color: var(--text-color-light);
@@ -1160,7 +1160,7 @@ img {
         justify-content: space-between;
     }
     .about__buttons{
-        justify-content: initial;
+        justify-content: center;
     }
 
     .qualification__tabs{
@@ -1237,6 +1237,7 @@ img {
     .footer__copy{
         margin-top: 4.5rem;
     }
+    
 }
 
 /* For large devices */
@@ -1279,5 +1280,9 @@ img {
 
     .contact__input{
     grid-template-columns: repeat(2,1fr);
+    }
+
+    .section__title{
+        font-size: x-large;
     }
 }
