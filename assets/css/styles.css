@@ -384,7 +384,7 @@ img {
 .button--flex{
     display: inline-flex;
     align-items: center;
-    margin: 20px;
+    margin: 5px;
 }
 
 .button--small{
