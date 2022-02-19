@@ -421,8 +421,9 @@ img {
 }
 
 .about__description{
-    text-align: center;
+    text-align: justify;
     margin-bottom: var(--mb-2-5);
+    font-size: small;
     
 }
 
@@ -464,6 +465,7 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: var(--mb-2-5);
+    
     cursor: pointer;
 }
 
