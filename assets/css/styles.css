@@ -534,37 +534,43 @@ img {
     width: 90%;
 }
 
+.skills__certifications{
+    width: 100%;
+}
+
 
 /*==================== BackendTech ====================*/
 .skills__aws{
-    width: 10%;
+    width: 20%;
 }
+.skills__gcp{
+    width: 25%;
+}
+
 .skills__api{
-    width: 10%;
+    width: 20%;
 }
-.skills__python{
-    width: 10%;
-}
+
 .skills__sql{
-    width: 10%;
+    width: 60%;
 }
 .skills__git{
-    width: 10%;
+    width: 30%;
 }
 
 /*==================== FrontDev ====================*/
 
 .skills__html{
-    width: 70%;
-}
-.skills__css{
     width: 60%;
 }
+.skills__css{
+    width: 50%;
+}
 .skills__js{
-    width: 70%;
+    width: 50%;
 }
 .skills__pythonf{
-    width: 70%;
+    width: 50%;
 }
 
 .skills__close .skills__list{
