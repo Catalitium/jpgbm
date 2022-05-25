@@ -455,6 +455,11 @@ img {
     justify-content: center;
 }
 
+.download-cv__button{
+    display: flex;
+    justify-content: center;
+}
+
 /*==================== SKILLS ====================*/
 
 .skills__container{
