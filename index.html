@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="AI Knowledge Portal" />
   <meta name="mobile-web-app-capable" content="yes" />
-  <title>AI Foundational Concepts Guide | Guild of Knowledge</title>
+  <title>Pablo Bot Guilds of Knowledge</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
@@ -59,60 +59,41 @@
   }
   </script>
   <style>
-    /* Sticky header and dark mode toggle */
-    .site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg, #0a0a0a); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .header-content { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2vw; }
-    .site-title { font-size: 2.2rem; color: var(--accent, #0ff); margin: 0; }
-    .header-actions { display: flex; gap: 0.5rem; }
-    .darkmode-toggle { background: none; border: none; color: var(--accent, #0ff); font-size: 1.5rem; cursor: pointer; }
-    .darkmode-toggle:focus { outline: 2px solid #0ff; }
-    @media (max-width: 600px) { .site-title { font-size: 1.3rem; } .header-content { flex-direction: column; gap: 0.5rem; } }
+    /* Simple header */
+    .site-header { 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      background: #0a0a0a; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
+      padding: 1rem 2vw;
+      text-align: center;
+    }
+    .site-title { 
+      font-size: 2.5rem; 
+      color: #0ff; 
+      margin: 0; 
+      font-weight: bold;
+      text-shadow: 0 0 10px #0ff;
+    }
+    @media (max-width: 600px) { 
+      .site-title { font-size: 1.8rem; } 
+    }
     /* Collapsible sections */
     .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .collapsible-content.open { max-height: 1000px; transition: max-height 0.5s cubic-bezier(.4,2,.6,1); }
     .collapse-toggle { background: #111; color: #0ff; border: 1px solid #0ff; border-radius: 8px; padding: 0.4rem 1rem; margin: 0.5rem 0; cursor: pointer; font-size: 1rem; }
     .collapse-toggle[aria-expanded="true"] { background: #0ff; color: #111; }
-    /* Jump links */
-    .main-nav { display: flex; gap: 1rem; justify-content: center; margin: 0.5rem 0; }
-    .main-nav a { color: #0ff; text-decoration: none; font-weight: 500; }
-    .main-nav a:hover, .main-nav a:focus { text-decoration: underline; color: #0f0; }
-    /* Dark mode */
-    @media (prefers-color-scheme: dark) { body { background: #0a0a0a; color: #f1f1f1; } }
-    @media (prefers-color-scheme: light) { body { background: #fff; color: #222; } .site-header { background: #fff; } }
-    body.dark { background: #0a0a0a; color: #f1f1f1; }
-    body.dark .site-header { background: #0a0a0a; }
-    body.dark .main-nav a { color: #0ff; }
-    body.dark .main-nav a:hover { color: #0f0; }
   </style>
 </head>
 <body>
   <canvas id="matrix-canvas" aria-hidden="true"></canvas>
   <header class="site-header" role="banner">
-    <div class="header-content">
-      <h1 class="site-title">Guild of Knowledge</h1>
-      <div class="header-actions">
-        <button class="language-toggle" aria-label="Change language">🌐</button>
-        <button class="darkmode-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">🌓</button>
-      </div>
-    </div>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#topics">Topics</a>
-      <a href="#dictionary">Dictionary</a>
-      <a href="#papers">Papers</a>
-      <a href="about/jpgbm-main/index.html">About</a>
-    </nav>
+    <h1 class="site-title">Pablos Guilds</h1>
   </header>
-  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="index.html"><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1" />
-      </li>
-    </ol>
-  </nav>
   <main id="main-content">
     <section class="hero-section">
-      <h2 class="hero-title">Enter the Matrix of Knowledge</h2>
+      <h2 class="hero-title">Guilds of Knowledge</h2>
       <p class="hero-subtitle">AI, Automation, Chemistry, Databases, Engineering, Mathematics</p>
     </section>
     <section class="topics-section" id="topics" aria-labelledby="topics-heading">
@@ -198,6 +179,10 @@
           <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a> (Vaswani et al., 2017)</li>
           <li><a href="https://arxiv.org/abs/1801.01290" target="_blank" rel="noopener">BERT: Pre-training of Deep Bidirectional Transformers</a> (Devlin et al., 2018)</li>
           <li><a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Language Models are Few-Shot Learners</a> (Brown et al., 2020)</li>
+          <li><a href="https://archive.org/details/riemannhypotheses" target="_blank" rel="noopener">Bernhard Riemann – On the Hypotheses which Lie at the Bases of Geometry</a> (1854)</li>
+          <li><a href="https://gallica.bnf.fr/ark:/12148/bpt6k433679w" target="_blank" rel="noopener">Évariste Galois – Mémoire sur les conditions de résolubilité des équations par radicaux</a> (1832)</li>
+          <li><a href="https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/tp2-ie.pdf" target="_blank" rel="noopener">Alan Turing – On Computable Numbers, with an Application to the Entscheidungsproblem</a> (1936)</li>
+          <li><a href="https://archive.org/details/cyberneticsorcon00wien" target="_blank" rel="noopener">Norbert Wiener – Cybernetics</a> (1948)</li>
         </ul>
       </div>
     </section>
@@ -213,10 +198,6 @@
   </footer>
   <script src="main.js"></script>
   <script>
-    // Dark mode toggle
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
     // Collapsible sections
     function toggleCollapse(id, btn) {
       var el = document.getElementById(id);
