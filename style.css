@@ -1,0 +1,1020 @@
+/* === Quick Navigation Bar === */
+.quick-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.quick-nav-btn {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
+  min-width: 80px;
+}
+
+.quick-nav-btn:hover,
+.quick-nav-btn:active {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border-color: #0ff;
+  color: #0ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* === Card Badges === */
+.card-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 255, 0, 0.2);
+  color: #0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+/* === Footer Links === */
+.footer-links {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.footer-links a {
+  color: #0f0;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #0ff;
+  text-decoration: underline;
+}
+
+/* === Base Layout === */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Courier New', monospace, Arial, sans-serif;
+  background: #0a0a0a;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Matrix Canvas === */
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* === Landing Page Styles === */
+.dictionary-container {
+  padding: 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.portal-header {
+  margin-bottom: 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.language-toggle {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-toggle:hover {
+  background: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.language-toggle:active {
+  transform: scale(0.95);
+}
+
+.flag-emoji {
+  font-size: 1.2em;
+  line-height: 1;
+  display: block;
+}
+
+.portal-title {
+  font-size: 3.5rem;
+  color: #0ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.portal-subtitle {
+  font-size: 1.2rem;
+  color: #0f0;
+  margin: 0;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* === Knowledge Grid === */
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.knowledge-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.knowledge-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.knowledge-card:hover::before,
+.knowledge-card:active::before {
+  left: 100%;
+}
+
+.knowledge-card:hover,
+.knowledge-card:active {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+  border-color: #0ff;
+}
+
+.knowledge-card a {
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  min-height: 44px;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+}
+
+.knowledge-card h3 {
+  font-size: 1.5rem;
+  color: #0f0;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.knowledge-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+.footer-subtitle {
+  font-size: 0.8rem;
+  color: #0f0;
+  margin: 0.5rem 0 0 0;
+  opacity: 0.7;
+}
+
+/* === Animations === */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Enhanced Mobile Responsive Design === */
+@media (max-width: 768px) {
+  .dictionary-container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .header-top {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .language-toggle {
+    font-size: 1.2rem;
+    min-width: 40px;
+    height: 40px;
+  }
+  
+  .portal-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .portal-subtitle {
+    font-size: 1rem;
+  }
+  
+  .quick-nav {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem;
+  }
+  
+  .quick-nav-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 70px;
+  }
+  
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .knowledge-card {
+    margin: 0 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .knowledge-card a {
+    padding: 1.5rem;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .knowledge-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .knowledge-card p {
+    font-size: 0.9rem;
+  }
+  
+  .card-badge {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+/* === iPhone Specific Optimizations === */
+@media (max-width: 480px) {
+  .dictionary-container {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  .portal-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .portal-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .quick-nav {
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+  }
+  
+  .quick-nav-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+    min-height: 40px;
+  }
+  
+  .knowledge-grid {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .knowledge-card {
+    margin: 0 0.3rem;
+    border-radius: 10px;
+  }
+  
+  .knowledge-card a {
+    padding: 1.2rem;
+    min-height: 60px;
+  }
+  
+  .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .knowledge-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .knowledge-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .card-badge {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.3rem;
+    top: 0.3rem;
+    right: 0.3rem;
+  }
+  
+  .footer {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .footer-links {
+    font-size: 0.7rem;
+  }
+  
+  .footer-links a {
+    margin: 0 0.3rem;
+  }
+}
+
+/* === Touch Device Optimizations === */
+@media (hover: none) and (pointer: coarse) {
+  .knowledge-card:hover {
+    transform: none;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    border-color: #0f0;
+  }
+  
+  .knowledge-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    border-color: #0ff;
+  }
+  
+  .knowledge-card::before {
+    display: none;
+  }
+  
+  .quick-nav-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .quick-nav-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* === Safe Area Support for iPhone X+ === */
+@supports (padding: max(0px)) {
+  .dictionary-container {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+  
+  .footer {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* === Legacy Support (for existing topic pages) === */
+.dictionary-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+
+.dictionary-list li a,
+.dictionary-list li {
+  background: #111;
+  padding: 0.8rem;
+  border-radius: 10px;
+  color: #0f0;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dictionary-list li:hover,
+.dictionary-list li a:hover {
+  background: #222;
+}
+
+/* === Topic Pages (Card Grid) === */
+.page-container {
+  padding: 2rem;
+}
+
+.page-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #0ff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: #0f0;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* === Global Link Styles === */
+a {
+  color: #00ff00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #66ff66;
+  text-decoration: underline;
+}
+
+/* === Topic Page Specific Styles === */
+.topic-header {
+  margin-bottom: 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #0f0;
+}
+
+.breadcrumb-link {
+  color: #0f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #0ff;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: #555;
+}
+
+.breadcrumb-current {
+  color: #0ff;
+  font-weight: bold;
+}
+
+.topic-title {
+  font-size: 3.5rem;
+  color: #0ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.topic-subtitle {
+  font-size: 1.2rem;
+  color: #0f0;
+  margin: 0;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.topic-intro {
+  margin-bottom: 3rem;
+}
+
+.intro-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.intro-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 0, 0.5));
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === Section Styles === */
+.section-title {
+  font-size: 2.5rem;
+  color: #0ff;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 15px #0ff;
+  font-weight: bold;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Concept Cards === */
+.concept-grid, .pillars-grid, .domains-grid, .design-grid, .normalization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.concept-card, .pillar-card, .domain-card, .design-card, .norm-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.concept-card:hover, .pillar-card:hover, .domain-card:hover, .design-card:hover, .norm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+  border-color: #0ff;
+}
+
+.concept-icon, .pillar-icon, .domain-icon, .design-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+}
+
+.concept-card h3, .pillar-card h3, .domain-card h3, .design-card h3, .norm-card h3 {
+  font-size: 1.3rem;
+  color: #0f0;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.concept-card p, .pillar-card p, .domain-card p, .design-card p, .norm-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.concept-badge, .pillar-badge, .domain-badge, .design-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 255, 0, 0.2);
+  color: #0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.norm-level {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 255, 255, 0.2);
+  color: #0ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* === List Styles === */
+.concept-list, .pillar-list, .domain-list, .design-list, .norm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.concept-list li, .pillar-list li, .domain-list li, .design-list li, .norm-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.concept-list li:before, .pillar-list li:before, .domain-list li:before, .design-list li:before, .norm-list li:before {
+  content: '•';
+  color: #0f0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.concept-list strong, .pillar-list strong, .domain-list strong, .design-list strong, .norm-list strong {
+  color: #0f0;
+  font-weight: bold;
+}
+
+/* === Specialized Section Grids === */
+.thermodynamics-grid, .process-grid, .fluid-grid, .thinkers-grid, .pioneers-grid, .papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.thermo-card, .process-card, .fluid-card, .thinker-card, .pioneer-card, .paper-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.thermo-card:hover, .process-card:hover, .fluid-card:hover, .thinker-card:hover, .pioneer-card:hover, .paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+  border-color: #0ff;
+}
+
+.process-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+}
+
+.thermo-card h3, .process-card h3, .fluid-card h3, .thinker-card h3, .pioneer-card h3, .paper-card h3 {
+  font-size: 1.2rem;
+  color: #0f0;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.thermo-list, .process-list, .fluid-list, .thinker-list, .pioneer-list, .paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thermo-list li, .process-list li, .fluid-list li, .thinker-list li, .pioneer-list li, .paper-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.thermo-list li:before, .process-list li:before, .fluid-list li:before, .thinker-list li:before, .pioneer-list li:before, .paper-list li:before {
+  content: '•';
+  color: #0f0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.thermo-list strong, .process-list strong, .fluid-list strong, .thinker-list strong, .pioneer-list strong, .paper-list strong {
+  color: #0f0;
+  font-weight: bold;
+}
+
+/* === Dictionary Grid === */
+.dictionary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dictionary-card {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.dictionary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+  border-color: #0ff;
+}
+
+.dictionary-card h3 {
+  font-size: 1.2rem;
+  color: #0f0;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dictionary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dictionary-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.dictionary-list li:before {
+  content: '•';
+  color: #0f0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.dictionary-list strong {
+  color: #0f0;
+  font-weight: bold;
+}
+
+/* === Topic Navigation === */
+.topic-navigation {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, #0a0a0a, #111);
+  border: 1px solid #0f0;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.topic-navigation h3 {
+  font-size: 1.5rem;
+  color: #0ff;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.topic-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.topic-link {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.topic-link:hover {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border-color: #0ff;
+  color: #0ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* === Responsive Design for Topic Pages === */
+@media (max-width: 768px) {
+  .topic-title {
+    font-size: 2.5rem;
+  }
+  
+  .topic-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .concept-grid, .pillars-grid, .domains-grid, .design-grid, .normalization-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .thermodynamics-grid, .process-grid, .fluid-grid, .thinkers-grid, .pioneers-grid, .papers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .dictionary-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .topic-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .topic-link {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topic-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .intro-card, .concept-card, .pillar-card, .domain-card, .design-card, .norm-card {
+    padding: 1.5rem;
+  }
+  
+  .thermo-card, .process-card, .fluid-card, .thinker-card, .pioneer-card, .paper-card {
+    padding: 1.2rem;
+  }
+  
+  .dictionary-card {
+    padding: 1.2rem;
+  }
+  
+  .concept-badge, .pillar-badge, .domain-badge, .design-badge, .norm-level {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

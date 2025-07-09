@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="description" content="Portal de Conocimiento - Explora IA, Automatización, Química, Bases de Datos, Ingeniería y Matemáticas" />
+  <meta name="keywords" content="conocimiento, IA, automatización, química, bases de datos, ingeniería, matemáticas, aprendizaje" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Portal de Conocimiento" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Gremio del Conocimiento</title>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B8N663XY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6B8N663XY');
+  </script>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+
+  <div class="dictionary-container">
+    <header class="portal-header">
+      <div class="header-top">
+        <h1 class="portal-title">Gremios</h1>
+        <button class="language-toggle" title="Change to English / Cambiar a inglés">
+          <span class="flag-emoji">🇺🇸</span>
+        </button>
+      </div>
+      <p class="portal-subtitle">Entra en la Matriz del Conocimiento</p>
+    </header>
+    
+    <!-- Quick Navigation Bar for Mobile -->
+    <nav class="quick-nav" id="quickNav">
+      <button class="quick-nav-btn" onclick="scrollToTop()">↑ Arriba</button>
+      <button class="quick-nav-btn" onclick="toggleMatrix()">🌊 Matriz</button>
+      <button class="quick-nav-btn" onclick="sharePage()">📤 Compartir</button>
+    </nav>
+    
+    <nav class="knowledge-grid">
+      <div class="knowledge-card" data-category="ai">
+        <a href="topics/ArtificialIntelligence/index.html">
+          <div class="card-icon">🤖</div>
+          <h3>Inteligencia Artificial</h3>
+          <p>Aprendizaje automático, redes neuronales y sistemas de IA</p>
+          <div class="card-badge">IA</div>
+        </a>
+      </div>
+      
+      <div class="knowledge-card" data-category="automation">
+        <a href="topics/automation/index.html">
+          <div class="card-icon">⚙️</div>
+          <h3>Automatización</h3>
+          <p>Automatización de procesos y optimización de flujos de trabajo</p>
+          <div class="card-badge">Auto</div>
+        </a>
+      </div>
+      
+      <div class="knowledge-card" data-category="chemistry">
+        <a href="topics/chemistry/index.html">
+          <div class="card-icon">🧪</div>
+          <h3>Química</h3>
+          <p>Reacciones químicas, compuestos y ciencia molecular</p>
+          <div class="card-badge">Quim</div>
+        </a>
+      </div>
+      
+      <div class="knowledge-card" data-category="databases">
+        <a href="topics/databases/index.html">
+          <div class="card-icon">🗄️</div>
+          <h3>Bases de Datos</h3>
+          <p>Almacenamiento, gestión y sistemas de consulta de datos</p>
+          <div class="card-badge">BD</div>
+        </a>
+      </div>
+      
+      <div class="knowledge-card" data-category="engineering">
+        <a href="topics/engineering/index.html">
+          <div class="card-icon">🔧</div>
+          <h3>Ingeniería</h3>
+          <p>Diseño técnico, sistemas y resolución de problemas</p>
+          <div class="card-badge">Ing</div>
+        </a>
+      </div>
+      
+      <div class="knowledge-card" data-category="mathematics">
+        <a href="topics/mathematics/index.html">
+          <div class="card-icon">📐</div>
+          <h3>Matemáticas</h3>
+          <p>Números, ecuaciones y conceptos matemáticos</p>
+          <div class="card-badge">Mat</div>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Portal de Conocimiento Matrix Rain. Todos los derechos reservados.</p>
+    <p class="footer-subtitle">Impulsado por la Matriz</p>
+    <div class="footer-links">
+      <a href="#" onclick="showAbout()">Acerca de</a> • 
+      <a href="#" onclick="showContact()">Contacto</a> • 
+      <a href="#" onclick="showPrivacy()">Privacidad</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html> 

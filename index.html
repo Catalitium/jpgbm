@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="description" content="AI Foundational Concepts Guide: Explore AI, Automation, Chemistry, Databases, Engineering, and Mathematics. Learn, discover, and master the future." />
+  <meta name="keywords" content="AI, artificial intelligence, machine learning, neural networks, deep learning, automation, chemistry, databases, engineering, mathematics, knowledge, guide, learning" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AI Knowledge Portal" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>AI Foundational Concepts Guide | Guild of Knowledge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+  <link rel="canonical" href="https://pablobot.com/index.html" />
+  <!-- Open Graph & Twitter -->
+  <meta property="og:title" content="AI Foundational Concepts Guide | Guild of Knowledge" />
+  <meta property="og:description" content="Explore AI, Automation, Chemistry, Databases, Engineering, and Mathematics. Learn, discover, and master the future." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pablobot.com/index.html" />
+  <meta property="og:image" content="https://pablobot.com/assets/img/ai-og.jpg" />
+  <meta property="og:image:alt" content="AI Matrix Rain Knowledge Portal - OG Preview" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Foundational Concepts Guide | Guild of Knowledge" />
+  <meta name="twitter:description" content="Explore AI, Automation, Chemistry, Databases, Engineering, and Mathematics. Learn, discover, and master the future." />
+  <meta name="twitter:image" content="https://pablobot.com/assets/img/ai-og.jpg" />
+  <meta name="twitter:image:alt" content="AI Matrix Rain Knowledge Portal - OG Preview" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC8GH7N249"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JC8GH7N249');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Guild of Knowledge",
+    "url": "https://pablobot.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pablobot.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pablobot.com/index.html"}
+    ]
+  }
+  </script>
+  <style>
+    /* Sticky header and dark mode toggle */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg, #0a0a0a); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .header-content { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2vw; }
+    .site-title { font-size: 2.2rem; color: var(--accent, #0ff); margin: 0; }
+    .header-actions { display: flex; gap: 0.5rem; }
+    .darkmode-toggle { background: none; border: none; color: var(--accent, #0ff); font-size: 1.5rem; cursor: pointer; }
+    .darkmode-toggle:focus { outline: 2px solid #0ff; }
+    @media (max-width: 600px) { .site-title { font-size: 1.3rem; } .header-content { flex-direction: column; gap: 0.5rem; } }
+    /* Collapsible sections */
+    .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .collapsible-content.open { max-height: 1000px; transition: max-height 0.5s cubic-bezier(.4,2,.6,1); }
+    .collapse-toggle { background: #111; color: #0ff; border: 1px solid #0ff; border-radius: 8px; padding: 0.4rem 1rem; margin: 0.5rem 0; cursor: pointer; font-size: 1rem; }
+    .collapse-toggle[aria-expanded="true"] { background: #0ff; color: #111; }
+    /* Jump links */
+    .main-nav { display: flex; gap: 1rem; justify-content: center; margin: 0.5rem 0; }
+    .main-nav a { color: #0ff; text-decoration: none; font-weight: 500; }
+    .main-nav a:hover, .main-nav a:focus { text-decoration: underline; color: #0f0; }
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) { body { background: #0a0a0a; color: #f1f1f1; } }
+    @media (prefers-color-scheme: light) { body { background: #fff; color: #222; } .site-header { background: #fff; } }
+    body.dark { background: #0a0a0a; color: #f1f1f1; }
+    body.dark .site-header { background: #0a0a0a; }
+    body.dark .main-nav a { color: #0ff; }
+    body.dark .main-nav a:hover { color: #0f0; }
+  </style>
+</head>
+<body>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <header class="site-header" role="banner">
+    <div class="header-content">
+      <h1 class="site-title">Guild of Knowledge</h1>
+      <div class="header-actions">
+        <button class="language-toggle" aria-label="Change language">🌐</button>
+        <button class="darkmode-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">🌓</button>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#topics">Topics</a>
+      <a href="#dictionary">Dictionary</a>
+      <a href="#papers">Papers</a>
+      <a href="about/jpgbm-main/index.html">About</a>
+    </nav>
+  </header>
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+    </ol>
+  </nav>
+  <main id="main-content">
+    <section class="hero-section">
+      <h2 class="hero-title">Enter the Matrix of Knowledge</h2>
+      <p class="hero-subtitle">AI, Automation, Chemistry, Databases, Engineering, Mathematics</p>
+    </section>
+    <section class="topics-section" id="topics" aria-labelledby="topics-heading">
+      <h2 id="topics-heading">Explore Topics</h2>
+      <div class="knowledge-grid">
+        <article class="knowledge-card" data-category="ai">
+          <a href="topics/ArtificialIntelligence/index.html">
+            <div class="card-icon" aria-hidden="true">🤖</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Machine learning, neural networks, and AI systems</p>
+            <div class="card-badge">AI</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="automation">
+          <a href="topics/automation/index.html">
+            <div class="card-icon" aria-hidden="true">⚙️</div>
+            <h3>Automation</h3>
+            <p>Process automation and workflow optimization</p>
+            <div class="card-badge">Auto</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="chemistry">
+          <a href="topics/chemistry/index.html">
+            <div class="card-icon" aria-hidden="true">🧪</div>
+            <h3>Chemistry</h3>
+            <p>Chemical reactions, compounds, and molecular science</p>
+            <div class="card-badge">Chem</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="databases">
+          <a href="topics/databases/index.html">
+            <div class="card-icon" aria-hidden="true">🗄️</div>
+            <h3>Databases</h3>
+            <p>Data storage, management, and query systems</p>
+            <div class="card-badge">DB</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="engineering">
+          <a href="topics/engineering/index.html">
+            <div class="card-icon" aria-hidden="true">🔧</div>
+            <h3>Engineering</h3>
+            <p>Technical design, systems, and problem-solving</p>
+            <div class="card-badge">Eng</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="mathematics">
+          <a href="topics/mathematics/index.html">
+            <div class="card-icon" aria-hidden="true">📐</div>
+            <h3>Mathematics</h3>
+            <p>Numbers, equations, and mathematical concepts</p>
+            <div class="card-badge">Math</div>
+          </a>
+        </article>
+        <article class="knowledge-card" data-category="about">
+          <a href="about/jpgbm-main/index.html">
+            <div class="card-icon" aria-hidden="true">👤</div>
+            <h3>About Us</h3>
+            <p>Learn more about our mission, team, and story</p>
+            <div class="card-badge">About</div>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="dictionary-section" id="dictionary" aria-labelledby="dictionary-heading">
+      <h2 id="dictionary-heading">AI Dictionary</h2>
+      <button class="collapse-toggle" aria-expanded="false" aria-controls="dictionary-list" onclick="toggleCollapse('dictionary-list', this)">Show/Hide</button>
+      <div id="dictionary-list" class="collapsible-content">
+        <!-- Dictionary content can be modularly loaded or expanded here -->
+        <ul>
+          <li><strong>Algorithm:</strong> Step-by-step procedure to solve problems or make decisions.</li>
+          <li><strong>Neural Network:</strong> Model inspired by the human brain, used for pattern recognition.</li>
+          <li><strong>Transformer:</strong> Deep learning model architecture for sequence data.</li>
+          <li><strong>Reinforcement Learning:</strong> Training by rewards from environment interaction.</li>
+          <li><strong>Prompt Engineering:</strong> Crafting text to steer AI behavior.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="papers-section" id="papers" aria-labelledby="papers-heading">
+      <h2 id="papers-heading">Foundational Papers</h2>
+      <button class="collapse-toggle" aria-expanded="false" aria-controls="papers-list" onclick="toggleCollapse('papers-list', this)">Show/Hide</button>
+      <div id="papers-list" class="collapsible-content">
+        <ul>
+          <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a> (Vaswani et al., 2017)</li>
+          <li><a href="https://arxiv.org/abs/1801.01290" target="_blank" rel="noopener">BERT: Pre-training of Deep Bidirectional Transformers</a> (Devlin et al., 2018)</li>
+          <li><a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Language Models are Few-Shot Learners</a> (Brown et al., 2020)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="about/jpgbm-main/index.html">About</a> •
+      <a href="#topics">Topics</a> •
+      <a href="#dictionary">Dictionary</a> •
+      <a href="#papers">Papers</a>
+    </nav>
+    <p>© 2024 Matrix Rain Knowledge Portal. All rights reserved.</p>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+    // Collapsible sections
+    function toggleCollapse(id, btn) {
+      var el = document.getElementById(id);
+      var open = el.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    }
+    // Jump to top
+    function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
+  </script>
+</body>
+</html>
