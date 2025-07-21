@@ -49,7 +49,7 @@ Browse structured, content-rich articles across:
 
 ---
 
-## 📂 Project Structure
+📂 Project Structure
 
 ├── index.html # Main portal
 ├── index-es.html # Spanish version (linked via toggle)
