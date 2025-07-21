@@ -1,114 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>https://guiledger.netlify.app/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Spanish Homepage -->
-  <url>
-    <loc>https://guiledger.netlify.app/index-es.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Privacy & Legal -->
-  <url>
-    <loc>https://guiledger.netlify.app/privacy-disclaimer.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Topic Pages -->
-  <url>
-    <loc>https://guiledger.netlify.app/topics/ArtificialIntelligence/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://guiledger.netlify.app/topics/automation/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://guiledger.netlify.app/topics/chemistry/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://guiledger.netlify.app/topics/databases/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://guiledger.netlify.app/topics/engineering/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://guiledger.netlify.app/topics/mathematics/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Articles Section -->
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/algorithms.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/solutions.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/recursion.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/fibonacci/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/fibonacci/fibonacci.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://guiledger.netlify.app/topics/articles/fibonacci/golden-ratio.html</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-</urlset> 
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.pablobot.com/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/index-es</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/artificialintelligence/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/automation/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/chemistry/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/databases/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/engineering/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/mathematics/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/about/jpgbm-main/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/fibonacci/fibonacci</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/recursion</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/solutions</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/algorithms</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/privacy-disclaimer</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/about/jpgbm-main/automation/</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/about/jpgbm-main/assets/pdf/Python101-Introduction-DEL.pdf</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/about/jpgbm-main/assets/pdf/CV_Jp_En.pdf</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pablobot.com/topics/articles/fibonacci/golden-ratio</loc>
+  <lastmod>2025-07-21T23:50:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
