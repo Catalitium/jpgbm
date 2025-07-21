@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Golden Ratio – Guild of Knowledge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Understand the golden ratio, its appearance in nature and design, and calculate it interactively. Learn how it connects to the Fibonacci sequence and more." />
+  <link rel="stylesheet" href="../article.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Golden Ratio Explained",
+    "description": "Understand the golden ratio, its appearance in nature and design, and calculate it interactively. Learn how it connects to the Fibonacci sequence and more.",
+    "author": { "@type": "Organization", "name": "Guild of Knowledge" },
+    "datePublished": "2024-07-21",
+    "keywords": ["Golden Ratio", "Math", "Design", "Geometry"],
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🌻 The Golden Ratio</h1>
+  </header>
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Contents</h2>
+    <ul>
+      <li><a class="article-link" href="#intro">What is the Golden Ratio?</a></li>
+      <li><a class="article-link" href="#formula">Formula</a></li>
+      <li><a class="article-link" href="#nature">Nature & Design</a></li>
+      <li><a class="article-link" href="#calculator">Interactive Calculator</a></li>
+      <li><a class="article-link" href="#related">Related Articles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="nav-articles">
+      <a class="article-link" href="/topics/articles/recursion.html">← Previous: Recursion</a>
+      <a class="article-link" href="/topics/articles/solutions.html">Next: Computational Problems →</a>
+    </div>
+    <section id="intro">
+      <article>
+        <h2>What is the Golden Ratio?</h2>
+        <p>The Golden Ratio, often represented by the Greek letter φ (phi), is approximately equal to 1.618. It's a mathematical constant that appears in art, architecture, nature, and design. From the spirals of shells and galaxies to the layout of the Parthenon, its pleasing proportions have captured the attention of creators and mathematicians for centuries.</p>
+      </article>
+    </section>
+    <section id="formula">
+      <article>
+        <h2>Formula</h2>
+        <div class="formula">
+          φ = (1 + √5) / 2 ≈ 1.6180339887
+        </div>
+      </article>
+    </section>
+    <section id="nature">
+      <article>
+        <h2>Nature & Design</h2>
+        <p>A rectangle whose sides follow this ratio is called a Golden Rectangle. If the shorter side is 1, the longer side is φ. This ratio is also deeply linked to the Fibonacci sequence—each ratio of consecutive Fibonacci numbers converges toward φ.</p>
+      </article>
+      <aside class="tag-bar">
+        <strong>Tags:</strong>
+        <a href="/topics/mathematics/index.html" class="tag">#Math</a>
+        <a href="/topics/mathematics/index.html" class="tag">#Geometry</a>
+      </aside>
+    </section>
+    <section id="calculator">
+      <article>
+        <h2>📏 Golden Ratio Calculator</h2>
+        <p>Enter a width to calculate the height of a Golden Rectangle:</p>
+        <div class="calculator">
+          <input type="number" id="widthInput" placeholder="Width" aria-label="Width input" />
+          <div class="result" id="heightOutput"></div>
+        </div>
+      </article>
+    </section>
+    <section id="related">
+      <h2>📚 Related Articles</h2>
+      <ul>
+        <li><a class="article-link" href="/topics/articles/fibonacci/fibonacci.html">📐 The Fibonacci Sequence</a></li>
+        <li><a class="article-link" href="/topics/articles/recursion.html">🔁 Understanding Recursion</a></li>
+        <li><a class="article-link" href="/topics/articles/solutions.html">📖 Computational Problems Dictionary</a></li>
+      </ul>
+      <p>Learn more about <a href="https://en.wikipedia.org/wiki/Golden_ratio" target="_blank" rel="noopener">the Golden Ratio on Wikipedia</a>.</p>
+    </section>
+    <div class="nav-articles">
+      <a class="article-link" href="/topics/articles/recursion.html">← Previous: Recursion</a>
+      <a class="article-link" href="/topics/articles/solutions.html">Next: Computational Problems →</a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 Guild of Knowledge – Golden Ratio
+  </footer>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a.article-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // Golden Ratio calculator
+    const input = document.getElementById('widthInput');
+    const output = document.getElementById('heightOutput');
+    const phi = 1.6180339887;
+    input.addEventListener('input', () => {
+      const width = parseFloat(input.value);
+      if (!isNaN(width)) {
+        const height = (width / phi).toFixed(3);
+        output.textContent = `Height ≈ ${height}`;
+      } else {
+        output.textContent = '';
+      }
+    });
+  </script>
+</body>
+</html>

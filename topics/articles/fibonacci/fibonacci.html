@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Fibonacci Sequence – Guild of Knowledge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the beauty and applications of the Fibonacci sequence in nature, art, and algorithms. Includes code examples and related concepts." />
+  <link rel="stylesheet" href="../article.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Fibonacci Sequence",
+    "description": "Discover the beauty and applications of the Fibonacci sequence in nature, art, and algorithms. Includes code examples and related concepts.",
+    "author": { "@type": "Organization", "name": "Guild of Knowledge" },
+    "datePublished": "2024-07-21",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+<header>
+  <h1>📐 The Fibonacci Sequence</h1>
+</header>
+<main>
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#who-was-fibonacci" class="article-link">Who Was Fibonacci?</a></li>
+      <li><a href="#implementations" class="article-link">Implementations</a></li>
+      <li><a href="#related-articles" class="article-link">Related Articles</a></li>
+      <li><a href="#faq" class="article-link">FAQ</a></li>
+    </ul>
+  </nav>
+  <section id="who-was-fibonacci">
+    <h2>Who Was Fibonacci?</h2>
+    <p>
+      Leonardo of Pisa, known as Fibonacci, was a 13th-century Italian mathematician who introduced the Hindu-Arabic numeral system to Europe. His name became immortalized through the Fibonacci sequence, where each number is the sum of the two preceding ones (0, 1, 1, 2, 3, 5, ...). Found in nature, art, and algorithms, it is a beautiful example of mathematics in the wild.
+    </p>
+    <p>
+      Below, you'll find two sections: the original, simple implementations of the sequence, followed by optimized techniques using memoization, iteration, and tail recursion in various languages.
+    </p>
+  </section>
+  <section id="implementations">
+    <h2>Implementations</h2>
+    <article>
+      <h3>Simple Recursive Versions</h3>
+      <div class="code-card">
+        <span class="lang">🐍 Python (Recursive)</span>
+        <pre><code>def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(10))  # Output: 55</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🟨 JavaScript (Recursive)</span>
+        <pre><code>function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+console.log(fibonacci(10)); // Output: 55</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🧊 C++ (Recursive)</span>
+        <pre><code>#include &lt;iostream&gt;
+
+int fibonacci(int n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+  std::cout &lt;&lt; fibonacci(10);  // Output: 55
+}</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🦀 Rust (Recursive)</span>
+        <pre><code>fn fibonacci(n: u32) -> u32 {
+    if n <= 1 { return n; }
+    fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+fn main() {
+    println!("{}", fibonacci(10));  // Output: 55
+}</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🔵 C (Recursive)</span>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int fibonacci(int n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+  printf("%d\n", fibonacci(10));  // Output: 55
+  return 0;
+}</code></pre>
+      </div>
+    </article>
+    <article>
+      <h3>Optimized Versions</h3>
+      <div class="code-card">
+        <span class="lang">🐍 Python (Memoization)</span>
+        <pre><code># Memoized version using a cache dictionary
+def fibonacci(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+    return memo[n]
+
+print(fibonacci(30))  # Output: 832040</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🟨 JavaScript (Iterative)</span>
+        <pre><code>// Iterative version with constant space
+function fibonacci(n) {
+  if (n <= 1) return n;
+  let prev = 0, curr = 1;
+  for (let i = 2; i <= n; i++) {
+    [prev, curr] = [curr, prev + curr];
+  }
+  return curr;
+}
+
+console.log(fibonacci(30)); // Output: 832040</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🧊 C++ (Dynamic Programming)</span>
+        <pre><code>// Bottom-up approach using vector
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int fibonacci(int n) {
+  if (n <= 1) return n;
+  std::vector&lt;int&gt; dp(n + 1);
+  dp[0] = 0; dp[1] = 1;
+  for (int i = 2; i &lt;= n; ++i)
+    dp[i] = dp[i - 1] + dp[i - 2];
+  return dp[n];
+}
+
+int main() {
+  std::cout &lt;&lt; fibonacci(30);  // Output: 832040
+}</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🦀 Rust (Tail Recursion)</span>
+        <pre><code>// Efficient tail-recursive implementation
+fn fibonacci(n: u32) -> u32 {
+    fn fib_tail(n: u32, a: u32, b: u32) -> u32 {
+        if n == 0 { a } else { fib_tail(n - 1, b, a + b) }
+    }
+    fib_tail(n, 0, 1)
+}
+
+fn main() {
+    println!("{}", fibonacci(30));  // Output: 832040
+}</code></pre>
+      </div>
+      <div class="code-card">
+        <span class="lang">🔵 C (Iterative)</span>
+        <pre><code>// Iterative version using loop
+#include &lt;stdio.h&gt;
+
+int fibonacci(int n) {
+  if (n <= 1) return n;
+  int prev = 0, curr = 1, temp;
+  for (int i = 2; i &lt;= n; i++) {
+    temp = curr;
+    curr += prev;
+    prev = temp;
+  }
+  return curr;
+}
+
+int main() {
+  printf("%d\n", fibonacci(30));  // Output: 832040
+  return 0;
+}</code></pre>
+      </div>
+    </article>
+  </section>
+  <section id="related-articles">
+    <h2>📚 Related Articles</h2>
+    <ul>
+      <li><a class="article-link" href="golden-ratio.html">🌻 The Golden Ratio in Nature and Design</a></li>
+      <li><a class="article-link" href="../recursion.html">🔁 Understanding Recursion with Real-World Examples</a></li>
+      <li><a class="article-link" href="../solutions.html">📖 Computational Problems Dictionary</a></li>
+    </ul>
+    <p>Learn more about <a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank" rel="noopener">Fibonacci numbers on Wikipedia</a>.</p>
+  </section>
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>What is the Fibonacci sequence?</summary>
+      <p>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1.</p>
+    </details>
+    <details>
+      <summary>Where is the Fibonacci sequence used?</summary>
+      <p>It appears in nature (e.g., flower petals, pinecones), art, architecture, and computer algorithms.</p>
+    </details>
+    <details>
+      <summary>How is the Fibonacci sequence related to the Golden Ratio?</summary>
+      <p>The ratio of consecutive Fibonacci numbers approaches the Golden Ratio as the numbers increase.</p>
+    </details>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Guild of Knowledge – Fibonacci Sequence
+</footer>
+</body>
+</html>

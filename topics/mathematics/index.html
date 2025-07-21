@@ -3,25 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathematics - Greatest Theorems, Texts & Concepts | Matrix Rain</title>
+  <title>Mathematics | Guild of Knowledge</title>
   <meta name="description" content="Explore foundational mathematical concepts, dictionary, and the most influential texts and theorems in history. Mobile-first, accessible, and SEO-optimized for students and researchers." />
-  <meta name="keywords" content="mathematics, math, theorems, foundational texts, dictionary, timeline, greatest theorems, proofs, analysis, algebra, geometry, logic, probability, calculus, students, learning" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0a0a0a" />
   <link rel="canonical" href="https://pablobot.com/topics/mathematics/index.html" />
   <link rel="stylesheet" href="/style.css" />
-  <!-- Open Graph & Twitter -->
-  <meta property="og:title" content="Mathematics - Greatest Theorems, Texts & Concepts | Matrix Rain" />
-  <meta property="og:description" content="Explore foundational mathematical concepts, dictionary, and the most influential texts and theorems in history. Mobile-first, accessible, and SEO-optimized for students and researchers." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://pablobot.com/topics/mathematics/index.html" />
-  <meta property="og:image" content="https://pablobot.com/assets/img/mathematics-og.jpg" />
-  <meta property="og:image:alt" content="Mathematics timeline, books, and theorems - Matrix Rain Knowledge Portal" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mathematics - Greatest Theorems, Texts & Concepts | Matrix Rain" />
-  <meta name="twitter:description" content="Explore foundational mathematical concepts, dictionary, and the most influential texts and theorems in history. Mobile-first, accessible, and SEO-optimized for students and researchers." />
-  <meta name="twitter:image" content="https://pablobot.com/assets/img/mathematics-og.jpg" />
-  <meta name="twitter:image:alt" content="Mathematics timeline, books, and theorems - Matrix Rain Knowledge Portal" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC8GH7N249"></script>
   <script>
@@ -33,68 +20,151 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pablobot.com/index.html"},
-      {"@type": "ListItem", "position": 2, "name": "Mathematics", "item": "https://pablobot.com/topics/mathematics/index.html"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Mathematics - Greatest Theorems, Texts & Concepts | Matrix Rain",
-    "description": "Explore foundational mathematical concepts, dictionary, and the most influential texts and theorems in history. Mobile-first, accessible, and SEO-optimized for students and researchers.",
-    "author": {"@type": "Organization", "name": "Matrix Rain Knowledge Portal"},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pablobot.com/topics/mathematics/index.html"},
-    "image": "https://pablobot.com/assets/img/mathematics-og.jpg",
-    "datePublished": "2024-01-01"
+    "@type": "WebPage",
+    "name": "Mathematics | Guild of Knowledge",
+    "description": "Explore foundational mathematical concepts, dictionary, and the most influential texts and theorems in history. Mobile-first, accessible, and SEO-optimized for students and researchers."
   }
   </script>
   <style>
-    .sticky-nav { position: sticky; top: 0; background: #0a0a0a; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .section-nav { display: flex; gap: 1rem; justify-content: center; padding: 0.5rem 0; background: #111; }
-    .section-nav a { color: #0ff; text-decoration: none; font-weight: 500; }
-    .section-nav a:hover, .section-nav a:focus { text-decoration: underline; color: #0f0; }
-    .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-    .collapsible-content.open { max-height: 2000px; transition: max-height 0.5s cubic-bezier(.4,2,.6,1); }
-    .collapse-toggle { background: #111; color: #0ff; border: 1px solid #0ff; border-radius: 8px; padding: 0.4rem 1rem; margin: 0.5rem 0; cursor: pointer; font-size: 1rem; }
-    .collapse-toggle[aria-expanded="true"] { background: #0ff; color: #111; }
-    @media (max-width: 600px) { .section-nav { flex-direction: column; gap: 0.5rem; } }
+    body { background: #0a0a0a; color: #eee; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    .site-header { background: #0a0a0a; box-shadow: 0 2px 8px rgba(0,0,0,0.3); padding: 1.5rem 2vw 1rem 2vw; text-align: center; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #0ff; }
+    .site-title { font-size: 2.3rem; color: #0ff; font-weight: bold; text-shadow: 0 0 10px #0ff; margin: 0; }
+    .site-nav { margin: 1rem 0 0.5rem 0; }
+    .site-nav a { color: #0ff; text-decoration: none; margin: 0 1.2rem; font-weight: 500; font-size: 1.1rem; transition: color 0.2s; }
+    .site-nav a:hover { color: #fff; text-decoration: underline; }
+    .topic-header { text-align: center; margin-top: 2rem; }
+    .topic-title { font-size: 2.2rem; color: #0ff; margin: 0; }
+    .topic-subtitle { color: #ccc; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .intro-card { display: flex; align-items: center; justify-content: center; gap: 1.2rem; background: #111; border-radius: 10px; padding: 1.2rem 2rem; margin: 2rem auto; max-width: 700px; }
+    .intro-icon { font-size: 2.5rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin: 2rem 0; }
+    .card { background: #111; border: 1px solid #0ff; border-radius: 10px; padding: 1rem 1.2rem; color: #eee; }
+    .card h3 { color: #0ff; margin-top: 0; }
+    .ai-dictionary, .ai-papers { margin: 1.5rem 0 2rem 0; padding-left: 1.2rem; }
+    .ai-dictionary li, .ai-papers li { margin-bottom: 0.7rem; }
+    .related-articles-block { margin-top: 2.5rem; background: #111; border-radius: 10px; padding: 1.2rem 1.5rem; }
+    .related-articles-block h2 { color: #0ff; margin-top: 0; }
+    .related-articles-block ul { list-style: none; padding: 0; }
+    .related-articles-block li { margin-bottom: 0.5rem; }
+    .article-link { color: #0ff; text-decoration: underline; }
+    .article-link:hover { color: #fff; }
+    .related-topics { margin-top: 2.5rem; }
+    .related-topics h2 { color: #0ff; }
+    .related-topics ul { list-style: none; padding: 0; }
+    .related-topics li { margin-bottom: 0.5rem; }
+    .footer { text-align: center; padding: 2rem 1rem; font-size: 0.95rem; color: #888; border-top: 1px solid #222; margin-top: 2rem; }
+    .footer-links a { color: #0ff; text-decoration: none; margin: 0 0.7rem; }
+    .footer-links a:hover { color: #fff; }
+    @media (max-width: 600px) { .site-title { font-size: 1.5rem; } .card-grid { grid-template-columns: 1fr; } .intro-card { flex-direction: column; padding: 1rem; } }
   </style>
 </head>
 <body>
-  <main>
-    <nav class="sticky-nav section-nav" aria-label="Section navigation">
-      <a href="#core-concepts">Core Concepts</a>
-      <a href="#dictionary">Dictionary</a>
-      <a href="#papers">Foundational Texts</a>
-      <a href="#related-topics">Related Topics</a>
+  <header class="site-header">
+    <h1 class="site-title">Guild of Knowledge</h1>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="/index.html">Home</a>
+      <a href="/topics/articles/index.html">Articles</a>
+      <a href="/topics/ArtificialIntelligence/index.html">AI</a>
+      <a href="/topics/mathematics/index.html">Mathematics</a>
+      <a href="/topics/automation/index.html">Automation</a>
+      <a href="/topics/chemistry/index.html">Chemistry</a>
+      <a href="/topics/databases/index.html">Databases</a>
+      <a href="/topics/engineering/index.html">Engineering</a>
     </nav>
+  </header>
+  <main>
     <header class="topic-header">
       <h1 class="topic-title">Mathematics</h1>
       <p class="topic-subtitle">The Language of the Universe</p>
     </header>
-    <section class="topic-intro">
-      <div class="intro-card">
-        <div class="intro-icon" aria-hidden="true">📐</div>
-        <p class="intro-text">
-          If anything holds the crumbling edges of this universe together, it's probably math. Not your high school worksheets, but the raw machinery humming behind orbits, spirals, markets, memory. It's old—older than logic—and possibly incomplete, and yet we keep scratching at it like apes tapping on an alien radio, convinced we can tune into something more than just ourselves.
-        </p>
-      </div>
+    <section class="intro-card">
+      <div class="intro-icon" aria-hidden="true">📐</div>
+      <p class="intro-text">
+        If anything holds the crumbling edges of this universe together, it's probably math. Not your high school worksheets, but the raw machinery humming behind orbits, spirals, markets, memory. It's old—older than logic—and possibly incomplete, and yet we keep scratching at it like apes tapping on an alien radio, convinced we can tune into something more than just ourselves.
+      </p>
     </section>
+    <section class="timeline">
+  <h2><a href="https://en.wikipedia.org/wiki/History_of_mathematics" target="_blank">Mathematical & AI Timeline</a></h2>
+  <p>Explore the evolution of mathematics and artificial intelligence through key discoveries and innovations.</p>
+  <ul class="timeline-list">
+    <li><strong>300 BCE:</strong> <a href="https://en.wikipedia.org/wiki/Euclid%27s_Elements" target="_blank">Euclid's <em>Elements</em> lays the groundwork for geometry.</a></li>
+    <li><strong>250 BCE:</strong> <a href="https://en.wikipedia.org/wiki/Archimedes" target="_blank">Archimedes develops methods for calculating areas and volumes.</a></li>
+    <li><strong>1801:</strong> <a href="https://en.wikipedia.org/wiki/Disquisitiones_Arithmeticae" target="_blank">Gauss publishes <em>Disquisitiones Arithmeticae</em>, foundational to number theory.</a></li>
+    <li><strong>1822:</strong> <a href="https://en.wikipedia.org/wiki/Fourier_series" target="_blank">Fourier introduces Fourier series, revolutionizing heat transfer analysis.</a></li>
+    <li><strong>1854:</strong> <a href="https://en.wikipedia.org/wiki/Riemannian_geometry" target="_blank">Riemann's work on geometry influences Einstein's theory of relativity.</a></li>
+    <li><strong>1900:</strong> <a href="https://en.wikipedia.org/wiki/Hilbert%27s_problems" target="_blank">Hilbert proposes 23 problems that shaped 20th-century mathematics.</a></li>
+    <li><strong>1910:</strong> <a href="https://en.wikipedia.org/wiki/Principia_Mathematica" target="_blank">Russell and Whitehead publish <em>Principia Mathematica</em>.</a></li>
+    <li><strong>1931:</strong> <a href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems" target="_blank">Gödel's incompleteness theorems challenge the foundations of mathematics.</a></li>
+    <li><strong>1936:</strong> <a href="https://en.wikipedia.org/wiki/Halting_problem" target="_blank">Turing formulates the Halting Problem and introduces the Turing machine.</a></li>
+    <li><strong>1943:</strong> <a href="https://en.wikipedia.org/wiki/McCulloch%E2%80%93Pitts_neuron" target="_blank">McCulloch & Pitts propose the first mathematical model of a neuron.</a></li>
+    <li><strong>1950:</strong> <a href="https://en.wikipedia.org/wiki/Turing_test" target="_blank">Alan Turing proposes the Turing Test in <em>Computing Machinery and Intelligence</em>.</a></li>
+    <li><strong>1951:</strong> <a href="https://en.wikipedia.org/wiki/SNARC" target="_blank">SNARC, the first neural network computer, built by Marvin Minsky & Dean Edmonds.</a></li>
+    <li><strong>1956:</strong> <a href="https://en.wikipedia.org/wiki/Logic_Theorist" target="_blank">Logic Theorist, created by Newell & Simon, becomes the first AI program.</a></li>
+    <li><strong>1958:</strong> <a href="https://en.wikipedia.org/wiki/Perceptron" target="_blank">Rosenblatt invents the Perceptron, a foundational neural network model.</a></li>
+    <li><strong>1966:</strong> <a href="https://en.wikipedia.org/wiki/ELIZA" target="_blank">ELIZA, an early NLP chatbot, simulates conversation with rule-based scripts.</a></li>
+    <li><strong>1997:</strong> <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)" target="_blank">IBM's Deep Blue defeats chess world champion Garry Kasparov.</a></li>
+    <li><strong>2012:</strong> <a href="https://en.wikipedia.org/wiki/AlexNet" target="_blank">AlexNet wins ImageNet with deep CNNs, launching the modern deep learning era.</a></li>
+    <li><strong>2016:</strong> <a href="https://en.wikipedia.org/wiki/AlphaGo" target="_blank">AlphaGo defeats Go champion Lee Sedol using deep reinforcement learning.</a></li>
+    <li><strong>2022:</strong> <a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank">OpenAI releases ChatGPT, setting a new benchmark in conversational AI.</a></li>
+  </ul>
+</section>
     <section id="core-concepts">
-      <h2>Core Concepts</h2>
-      <div class="card-grid">
-        <div class="card"><h3>Arithmetic</h3><p>The study of numbers and operations—ancient and foundational, used in everything from trade to cryptography.</p></div>
-        <div class="card"><h3>Geometry</h3><p>The shape of the world, the tension of angles, the postulates of Euclid. Still relevant, still expanding.</p></div>
-        <div class="card"><h3>Algebra</h3><p>From Persian al-jabr: solving for the unknown. It lets us speak symbolically, abstractly, infinitely.</p></div>
-        <div class="card"><h3>Calculus</h3><p>Invented in parallel by Newton and Leibniz. Measures change, motion, and growth. A blade for time itself.</p></div>
-        <div class="card"><h3>Set Theory</h3><p>The skeleton of modern mathematics. Cantor’s naive infinities and Zermelo-Fraenkel’s formal axioms underlie it all.</p></div>
-        <div class="card"><h3>Logic</h3><p>From Aristotle to Russell, logic refines reasoning. It’s the toolkit for proving what is—or isn’t—provable.</p></div>
-      </div>
-    </section>
+  <h2>Core Concepts</h2>
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Algebra</h3>
+      <p>The grammar of numbers, the art of the unknown—algebra lets us build, shift, and condense. From solving x to cracking codes, it whispers logic behind the fence.</p>
+    </div>
+
+    <div class="card">
+      <h3>Arithmetic</h3>
+      <p>Counting sheep or coding chips, arithmetic is always there. It fuels your wallet, your recipes, and cryptographic flair. Simple? Yes. Essential? Everywhere.</p>
+    </div>
+
+    <div class="card">
+      <h3>Calculus</h3>
+      <p>Change, captured. Motion, measured. With derivatives and integrals, we slice through time and curve through space. Calculus doesn’t just explain the world—it anticipates it.</p>
+    </div>
+
+    <div class="card">
+      <h3>Computer Graphics & Gaming</h3>
+      <p>Matrices dance, vectors fly—your game world wouldn’t draw without the math behind the sky. Rendering, physics, collisions—it’s all numbers in disguise.</p>
+    </div>
+
+    <div class="card">
+      <h3>Finance & Cryptography</h3>
+      <p>From Bitcoin’s blocks to Wall Street’s trades, math builds the systems where money behaves. Proofs protect, models predict—the economy ticks to algorithms’ tricks.</p>
+    </div>
+
+    <div class="card">
+      <h3>Geometry</h3>
+      <p>Lines and shapes, proofs and planes—geometry sculpts space and logic’s domain. From pyramids to GPS, it holds its form and finds your place.</p>
+    </div>
+
+    <div class="card">
+      <h3>Logic</h3>
+      <p>Reason’s ruler and paradox’s foe—logic tells us what we truly know. It's not just puzzles or courtroom flair; it's how we verify what’s even there.</p>
+    </div>
+
+    <div class="card">
+      <h3>Machine Learning & AI</h3>
+      <p>It learns from data, adapts with math. Behind the bots and glowing brains is calculus in stealthy paths. Without math, your AI is just a dream with no math class.</p>
+    </div>
+
+    <div class="card">
+      <h3>Physics & Engineering</h3>
+      <p>From circuits to stars, forces obey formulas. Calculus describes the dance, vectors give it stance. Whether bridges or black holes, math is their blueprint in advance.</p>
+    </div>
+
+    <div class="card">
+      <h3>Set Theory</h3>
+      <p>Infinity’s playground and logic’s core. Sets define what belongs, what doesn’t—who’s in, who’s out, and how we store. All of math starts here, at the door.</p>
+    </div>
+
+  </div>
+</section>
+
     <section id="dictionary">
       <h2>Mathematical Dictionary</h2>
       <button class="collapse-toggle" aria-expanded="false" aria-controls="math-dictionary" onclick="toggleCollapse('math-dictionary', this)">Show/Hide</button>
@@ -127,7 +197,7 @@
           <li id="papers-euclid"><strong><a href="https://www.gutenberg.org/ebooks/21076" target="_blank">Euclid – Elements (~300 BCE)</a></strong> — The geometry blueprint. Definitions, postulates, and theorems still in classrooms today.</li>
           <li id="papers-gauss"><strong><a href="https://www.jstor.org/stable/3607325" target="_blank">Carl Friedrich Gauss – Disquisitiones Arithmeticae (1801)</a></strong> — The launch pad of modern number theory.</li>
           <li id="papers-gauss-motus"><strong><a href="https://archive.org/details/theoriamotuscorp00gaus" target="_blank">Carl Friedrich Gauss – Theoria Motus Corporum Coelestium (1809)</a></strong> — Applied mathematics to celestial mechanics.</li>
-          <li id="papers-hilbert"><strong><a href="https://www.maths.ed.ac.uk/~v1ranick/papers/foundhilbert.pdf" target="_blank">David Hilbert – Mathematical Problems (1900)</a></strong> — Outlined 23 critical problems; defined 20th-century mathematics.</li>
+          <li id="papers-hilbert"><strong><a href="https://www.maths.ed.ac.uk/~v1ranick/papers/foundhilbert.pdf" target="_blank">David Hilbert – Mathematical Problems (1900)</a></strong> — Outlined 23 problems that shaped 20th-century mathematics.</li>
           <li id="papers-euler"><strong><a href="https://archive.org/details/IntroductioInAnalysinInfinitorum" target="_blank">Leonhard Euler – Introductio in Analysin Infinitorum (1748)</a></strong> — Fundamental text in mathematical analysis and exponential functions.</li>
           <li id="papers-fourier"><strong><a href="https://archive.org/details/theorieanalytique00four" target="_blank">Joseph Fourier – Théorie analytique de la chaleur (1822)</a></strong> — Basis of Fourier analysis and heat equations.</li>
           <li id="papers-riemann"><strong><a href="https://archive.org/details/riemannhypotheses" target="_blank">Bernhard Riemann – On the Hypotheses which Lie at the Bases of Geometry (1854)</a></strong> — Gave rise to Riemannian geometry and relativity theory.</li>
@@ -144,7 +214,7 @@
         </ul>
       </div>
     </section>
-    <nav class="related-topics" id="related-topics" aria-label="Related Topics">
+    <nav class="related-topics" aria-label="Related Topics">
       <h2>Related Topics</h2>
       <ul>
         <li><a href="../ArtificialIntelligence/index.html">Artificial Intelligence</a></li>
@@ -154,18 +224,33 @@
         <li><a href="../engineering/index.html">Engineering</a></li>
       </ul>
     </nav>
+    <section class="conclusion">  
+      <h2>Conclusion</h2>
+      <p>Mathematics is not just a subject; it's a universal language that transcends cultures and time. From the ancient Greeks to modern-day theorists, it continues to evolve, revealing deeper truths about our universe. Whether you're a student, researcher, or just curious, the journey through mathematics is one of discovery and wonder.</p>
+    </section>
+    <section class="related-articles-block">
+      <h2>Related Articles</h2>
+      <ul>
+        <li><a class="article-link" href="/topics/articles/fibonacci/fibonacci.html">The Magic of Fibonacci</a></li>
+        <li><a class="article-link" href="/topics/articles/recursion.html">Understanding Recursion</a></li>
+        <li><a class="article-link" href="/topics/articles/golden-ratio.html">The Golden Ratio</a></li>
+        <li><a class="article-link" href="/topics/articles/solutions.html">Computational Problems Dictionary</a></li>
+        <li><a class="article-link" href="/topics/articles/algorithms.html">AI & Math Concepts Dictionary</a></li>
+      </ul>
+    </section>
   </main>
   <footer class="footer">
     <nav aria-label="Footer" class="footer-links">
-      <a href="/about/main/index.html">About Us</a> •
+      <a href="/about/jpgbm-main/index.html">About Us</a>
       <a href="/index.html">Home</a>
-      <a href="/topics/ArtificialIntelligence/">Artificial Intelligence</a>
+      <a href="/topics/ArtificialIntelligence/">AI</a>
       <a href="/topics/automation/">Automation</a>
       <a href="/topics/chemistry/">Chemistry</a>
       <a href="/topics/databases/">Databases</a>
       <a href="/topics/engineering/">Engineering</a>
+      <a href="/topics/articles/">Articles</a>
     </nav>
-    <p>© 2024 Matrix Rain Knowledge Portal. All rights reserved.</p>
+    <p>© 2024 Guild of Knowledge. All rights reserved.</p>
   </footer>
   <script>
     // Collapsible sections

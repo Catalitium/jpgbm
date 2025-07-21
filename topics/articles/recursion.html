@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Understanding Recursion – Guild of Knowledge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn how recursion works through relatable real-world analogies, interactive examples, and code. Discover why recursion is essential in computer science and beyond." />
+  <link rel="stylesheet" href="article.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Understanding Recursion with Real-World Examples",
+    "description": "Learn how recursion works through relatable real-world analogies, interactive examples, and code. Discover why recursion is essential in computer science and beyond.",
+    "author": {
+      "@type": "Organization",
+      "name": "Guild of Knowledge"
+    },
+    "datePublished": "2024-07-21",
+    "keywords": ["Recursion", "Algorithms", "Programming", "Computer Science"],
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🔁 Understanding Recursion</h1>
+  </header>
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Contents</h2>
+    <ul>
+      <li><a class="article-link" href="/topics/articles/index.html">🏠 Home</a></li>
+      <li><a class="article-link" href="#intro">What is Recursion?</a></li>
+      <li><a class="article-link" href="#real-world">Real-World Analogies</a></li>
+      <li><a class="article-link" href="#why-recursion">Why Use Recursion?</a></li>
+      <li><a class="article-link" href="#calculator">Interactive Example</a></li>
+      <li><a class="article-link" href="#related">Related Articles</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="nav-articles">
+      <a class="article-link" href="/topics/articles/index.html">← Back to Articles</a>
+      <a class="article-link" href="/topics/articles/fibonacci/fibonacci.html">Next: Fibonacci →</a>
+    </div>
+    <section id="intro">
+      <article>
+        <h2>What is Recursion?</h2>
+        <p>
+          Recursion is a fundamental concept in programming where a function calls itself to solve smaller instances of a problem. While it may seem abstract, recursion is all around us—from navigating nested folders on your computer to opening Russian dolls.
+        </p>
+      </article>
+    </section>
+    <section id="real-world">
+      <article>
+        <h2>Real-World Analogies</h2>
+        <div class="example">
+          🗂️ <strong>File Explorer:</strong> When a file system scans all directories and subdirectories, it uses recursion to "drill down" into folders.
+        </div>
+        <div class="example">
+          🪆 <strong>Russian Dolls:</strong> You open a doll, and inside there's another... until you reach the last one. Each doll opens itself recursively.
+        </div>
+      </article>
+    </section>
+    <section id="why-recursion">
+      <article>
+        <h2>Why Use Recursion?</h2>
+        <div class="callout">
+          The beauty of recursion lies in its elegance. Instead of manually looping, recursion expresses repetition naturally—especially in algorithms like tree traversal, parsing, and combinatorics.
+        </div>
+      </article>
+      <aside class="tag-bar">
+        <strong>Tags:</strong>
+        <a href="/topics/ArtificialIntelligence/index.html" class="tag">#Programming</a>
+      </aside>
+    </section>
+    <section id="calculator">
+      <article>
+        <h2>🧮 Interactive: Recursive Factorial Calculator</h2>
+        <p>Enter a number to compute n! using recursion:</p>
+        <div class="calculator">
+          <input type="number" id="factInput" placeholder="e.g. 5" aria-label="Factorial input" />
+          <div class="result" id="factOutput"></div>
+        </div>
+      </article>
+    </section>
+    <section id="related">
+      <h2>📚 Related Articles</h2>
+      <ul>
+        <li><a class="article-link" href="/topics/articles/fibonacci/fibonacci.html">📐 The Fibonacci Sequence</a></li>
+        <li><a class="article-link" href="/topics/articles/solutions.html">📖 Computational Problems Dictionary</a></li>
+        <li><a class="article-link" href="/topics/articles/fibonacci/golden-ratio.html">🌻 The Golden Ratio</a></li>
+      </ul>
+      <p>Learn more about <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)" target="_blank" rel="noopener">recursion on Wikipedia</a>.</p>
+    </section>
+    <div class="nav-articles">
+      <a class="article-link" href="/topics/articles/fibonacci/fibonacci.html">← Previous: Fibonacci</a>
+      <a class="article-link" href="/topics/articles/solutions.html">Next: Computational Problems →</a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 Guild of Knowledge – Recursion Explained
+  </footer>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a.article-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // Factorial calculator
+    function factorial(n) {
+      if (n <= 1) return 1;
+      return n * factorial(n - 1);
+    }
+    const factInput = document.getElementById('factInput');
+    const factOutput = document.getElementById('factOutput');
+    factInput.addEventListener('input', () => {
+      const n = parseInt(factInput.value);
+      if (!isNaN(n) && n >= 0 && n <= 20) {
+        factOutput.textContent = `${n}! = ${factorial(n)}`;
+      } else {
+        factOutput.textContent = '';
+      }
+    });
+  </script>
+</body>
+</html>
+

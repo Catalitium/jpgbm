@@ -1,0 +1,97 @@
+html { scroll-behavior: smooth; }
+body { background: #0a0a0a; color: #eee; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.7; font-size: 1rem; }
+header { text-align: center; padding: 2rem 1rem 1rem 1rem; background: radial-gradient(circle at top, #00f0ff33, #000); border-bottom: 2px solid #0ff; }
+header h1 { font-size: 2.4rem; color: #0ff; margin-bottom: 0.5rem; text-shadow: 0 0 10px #0ff6; }
+header p { font-size: 1rem; color: #ccc; max-width: 600px; margin: 0 auto; }
+.toc { position: sticky; top: 0; background: #111; z-index: 10; border-bottom: 1px solid #0ff4; padding: 0.5rem 1rem; margin-bottom: 2rem; box-shadow: 0 2px 8px #0ff1; }
+.toc h2 { color: #0ff; font-size: 1.1rem; margin: 0 0 0.5rem 0; }
+.toc ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1.2rem; }
+.toc a.article-link { color: #0ff; text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.2s; }
+.toc a.article-link:focus, .toc a.article-link:hover { color: #fff; text-decoration: underline; outline: 2px solid #0ff; outline-offset: 2px; }
+main { padding: 2rem 1rem; max-width: 800px; margin: auto; }
+section { margin-bottom: 2.5rem; }
+section h2, article h3 { color: #0ff; margin-bottom: 0.3rem; }
+article { margin-top: 1.2rem; padding-left: 1rem; border-left: 3px solid #222; margin-bottom: 2rem; }
+.callout { background: #111; border-left: 4px solid #0ff; padding: 1rem; margin: 1.5rem 0; border-radius: 8px; font-size: 1.05rem; }
+.nav-articles { display: flex; justify-content: space-between; margin: 2rem 0 1rem 0; gap: 1rem; }
+.nav-articles a { background: #111; color: #0ff; border: 1px solid #0ff4; border-radius: 8px; padding: 0.7rem 1.2rem; text-decoration: none; font-weight: 500; transition: background 0.2s, color 0.2s; }
+.nav-articles a:focus, .nav-articles a:hover { background: #0ff; color: #000; outline: 2px solid #0ff; outline-offset: 2px; }
+#searchBox { display: block; margin: 1.5rem auto; padding: 0.5rem; width: 90%; max-width: 500px; font-size: 1rem; border-radius: 6px; border: 1px solid #333; background: #111; color: #eee; }
+.hidden { display: none; }
+footer { text-align: center; color: #777; padding: 2rem 1rem; border-top: 1px solid #222; font-size: 0.95rem; margin-top: 2rem; }
+a:focus { outline: 2px solid #0ff; outline-offset: 2px; }
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .toc ul { gap: 0.5rem; font-size: 0.95rem; }
+  main { padding: 0 0.5rem; }
+  body { font-size: 1.05rem; }
+  header { padding: 1.2rem 0.5rem 0.7rem 0.5rem; }
+}
+@media (max-width: 400px) {
+  header h1 { font-size: 1.1rem; }
+  .nav-articles a { padding: 0.5rem 0.7rem; font-size: 0.95rem; }
+} 
+
+/* --- Begin migrated from fib.css --- */
+section.intro {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  line-height: 1.6;
+  background: #111;
+  border-left: 4px solid #0ff;
+  border-radius: 10px;
+}
+section.intro h2 {
+  color: #0ff;
+  margin-top: 0;
+}
+.code-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.code-card {
+  background: linear-gradient(to bottom, #1e1e1e, #161616);
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.code-card:hover {
+  transform: translateY(-4px);
+  border-color: #0ff;
+}
+.lang {
+  font-weight: bold;
+  color: #0ff;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1rem;
+}
+pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  border: 1px solid #333;
+}
+pre code {
+  display: block;
+  white-space: pre;
+}
+.comment { color: #6a9955; font-style: italic; }
+.keyword { color: #569cd6; }
+.function { color: #dcdcaa; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+.type { color: #4ec9b0; }
+/* --- End migrated from fib.css --- */ 
