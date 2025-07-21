@@ -63,21 +63,6 @@ Browse structured, content-rich articles across:
 ├── about/
 │ └── jpgbm-main/ # About the creator
 
-## 💡 SEO Highlights
-
-This portal is **fully optimized for organic traffic**:
-
-- Rich meta descriptions and keywords
-- Social previews: OG tags + Twitter Cards
-- Schema.org:
-  - `WebSite` with search action
-  - `BreadcrumbList` for navigational context
-- Clean, crawlable HTML structure
-- Canonical URLs for search engine consistency
-- Alt text and accessible elements for screen readers
-
----
-
 🛠️ Contributing
 Want to contribute? Here’s how:
 
