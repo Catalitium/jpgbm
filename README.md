@@ -47,6 +47,8 @@ Browse structured, content-rich articles across:
 - ✅ Language toggle (EN/ES ready)
 - ✅ Modular topic system (easy to expand)
 
+
+<!--
 ## 📂 Project Structure
 
 ├── index.html # Main portal
@@ -62,6 +64,7 @@ Browse structured, content-rich articles across:
 │ └── mathematics/
 ├── about/
 │ └── jpgbm-main/ # About the creator
+-->
 
 🛠️ Contributing
 Want to contribute? Here’s how:
